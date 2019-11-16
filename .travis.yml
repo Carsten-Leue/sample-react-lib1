@@ -11,8 +11,8 @@ before_deploy:
   - cd dist
 deploy:
   provider: npm
-  skip_cleanup: true
+  cleanup: false
   email: '$NPM_EMAIL'
-  api_key: '$NPM_TOKEN'
+  api_token: '$NPM_TOKEN'
   on:
     tags: true
